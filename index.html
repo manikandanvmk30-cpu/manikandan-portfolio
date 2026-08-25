@@ -1,181 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manikandan V | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manikandan V — Software Developer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<nav>
-    <div class="logo">Manikandan V</div>
+<div class="progress-bar" id="progressBar"></div>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav id="nav">
+  <div class="logo"><span class="logo-bracket">&lt;</span>Manikandan_V<span class="logo-bracket">/&gt;</span></div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul id="navLinks">
+    <li><a href="#home" class="tab active" data-tab="home.js">home.js</a></li>
+    <li><a href="#about" class="tab" data-tab="about.md">about.md</a></li>
+    <li><a href="#skills" class="tab" data-tab="skills.json">skills.json</a></li>
+    <li><a href="#projects" class="tab" data-tab="projects/">projects/</a></li>
+    <li><a href="#education" class="tab" data-tab="education.yml">education.yml</a></li>
+    <li><a href="#certifications" class="tab" data-tab="certs.log">certs.log</a></li>
+    <li><a href="#contact" class="tab" data-tab="contact.sh">contact.sh</a></li>
+  </ul>
 </nav>
 
+<!-- HOME -->
 <section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <h1>Manikandan V</h1>
-
-        <img src="profile.jpeg" alt="Manikandan V" class="profile-img">
-
-        <h2>Python Developer | Full Stack Developer | AI Enthusiast</h2>
-
-        <p>
-            Computer Science Engineering Student passionate about
-            Python, Web Development, Artificial Intelligence,
-            and building real-world solutions.
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="terminal-window reveal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+        <span class="terminal-title">manikandan@sona-college: ~</span>
+      </div>
+      <div class="terminal-body">
+        <p class="line"><span class="prompt">$</span> whoami</p>
+        <h1 class="typed-name"><span id="typedName"></span><span class="cursor">&#9608;</span></h1>
+        <p class="line muted">// Computer Science Engineering student, Sona College of Technology</p>
+        <p class="line"><span class="prompt">$</span> cat roles.txt</p>
+        <p class="roles">
+          <span class="role-tag">Python Developer</span>
+          <span class="role-tag">Full&nbsp;Stack Developer</span>
+          <span class="role-tag">AI Enthusiast</span>
         </p>
-
-        <a href="#projects" class="btn">View Projects</a>
-
+        <p class="line"><span class="prompt">$</span> ./build_ideas.sh --with real-world-impact</p>
+        <p class="line output">Compiling curiosity, code and coffee into working products...</p>
+      </div>
     </div>
 
+    <div class="hero-cta reveal">
+      <a href="#projects" class="btn btn-primary">
+        <span>View Projects</span> <span class="arrow">→</span>
+      </a>
+      <a href="Manikandan_V_Resume.pdf" class="btn btn-ghost" download>
+        <span>Download Resume</span> <span class="arrow">↓</span>
+      </a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll down"><span></span></a>
 </section>
 
-<section id="about">
-
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-head reveal">
+    <span class="file-label">about.md</span>
     <h2>About Me</h2>
-
-    <p>
-        I am currently pursuing B.E Computer Science and Engineering
-        at Sona College of Technology with a CGPA of 8.36.
-        I am passionate about Python, Full Stack Development,
-        Databases and AI-based solutions.
+  </div>
+  <div class="about-grid reveal">
+    <p class="about-text">
+      I'm currently pursuing a <strong>B.E. in Computer Science and Engineering</strong> at
+      Sona College of Technology, Anna University <em>(2024&ndash;2028)</em>, maintaining a strong
+      <strong>CGPA of 8.36</strong>. I build things at the intersection of
+      <strong>Python</strong>, <strong>full-stack web development</strong>, <strong>databases</strong>,
+      and <strong>AI-driven solutions</strong> — turning ideas into practical applications that improve
+      productivity, simplify processes and create genuinely useful experiences for real people.
     </p>
-
+    <div class="stat-rail">
+      <div class="stat-card">
+        <span class="stat-num">8.36</span>
+        <span class="stat-label">CGPA</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">4+</span>
+        <span class="stat-label">Projects Shipped</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">9+</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Languages Spoken</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skills">
-
+<!-- SKILLS -->
+<section id="skills" class="section alt">
+  <div class="section-head reveal">
+    <span class="file-label">skills.json</span>
     <h2>Technical Skills</h2>
+  </div>
 
-    <div class="skills-grid">
+  <div class="skills-columns">
 
-        <div class="skill-card">Java</div>
-        <div class="skill-card">Python</div>
-        <div class="skill-card">C</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">TypeScript</div>
-        <div class="skill-card">React</div>
-        <div class="skill-card">Node.js</div>
-        <div class="skill-card">MySQL</div>
-        <div class="skill-card">Git</div>
-        <div class="skill-card">GitHub</div>
-
+    <div class="skill-group reveal">
+      <h3><span class="key">"languages"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip">Java</span>
+        <span class="chip">Python</span>
+        <span class="chip">C</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">SQL</span>
+      </div>
     </div>
 
+    <div class="skill-group reveal">
+      <h3><span class="key">"frontend"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">React</span>
+        <span class="chip">Vite</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3><span class="key">"backend"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip">Node.js</span>
+        <span class="chip">Spring Boot</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3><span class="key">"database"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip">MySQL</span>
+        <span class="chip">MongoDB</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3><span class="key">"tools"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">MS Office</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3><span class="key">"core"</span>:</h3>
+      <div class="chip-row">
+        <span class="chip soft">Communication</span>
+        <span class="chip soft">Problem Solving</span>
+        <span class="chip soft">Teamwork</span>
+        <span class="chip soft">Time Management</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="projects">
-
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-head reveal">
+    <span class="file-label">projects/</span>
     <h2>Projects</h2>
+  </div>
 
-    <div class="project-container">
+  <div class="project-list">
 
-        <div class="project-card">
-            <h3>Event Matrix</h3>
-            <p>
-                Smart Event Management System with React,
-                Node.js and MongoDB.
-            </p>
-        </div>
+    <article class="project-card reveal">
+      <div class="project-top">
+        <h3>Event Matrix</h3>
+        <span class="project-tag">Smart Event Management System</span>
+      </div>
+      <p class="project-desc">A comprehensive event management platform that streamlines organization and
+        participation — from registration to certification — with a modern, role-based interface.</p>
+      <ul class="feature-list">
+        <li>Event registration &amp; management</li>
+        <li>QR code verification system</li>
+        <li>Automated certificate generation</li>
+        <li>Role-based dashboards for students, organizers &amp; admins</li>
+        <li>Real-time event tracking &amp; notifications</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-pill">React</span><span class="stack-pill">Node.js</span><span class="stack-pill">MongoDB</span>
+      </div>
+    </article>
 
-        <div class="project-card">
-            <h3>Hospital Monitor</h3>
-            <p>
-                Java Swing Application for patient
-                management and medical records.
-            </p>
-        </div>
+    <article class="project-card reveal">
+      <div class="project-top">
+        <h3>Hospital Monitor</h3>
+        <span class="project-tag">Patient Management Desktop App</span>
+      </div>
+      <p class="project-desc">A desktop-based patient management system that helps healthcare staff
+        organize patient information and medical records efficiently.</p>
+      <ul class="feature-list">
+        <li>Patient management system</li>
+        <li>Medical record maintenance</li>
+        <li>Severity-based patient sorting</li>
+        <li>User-friendly graphical interface</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-pill">Java Swing</span>
+      </div>
+    </article>
 
-        <div class="project-card">
-            <h3>Student Identity System</h3>
-            <p>
-                Spring Boot Application with authentication
-                and database integration.
-            </p>
-        </div>
+    <article class="project-card reveal">
+      <div class="project-top">
+        <h3>Student Identity System</h3>
+        <span class="project-tag">Secure Identity Management</span>
+      </div>
+      <p class="project-desc">A secure system for maintaining and managing student information using
+        modern backend architecture and authenticated access.</p>
+      <ul class="feature-list">
+        <li>Student authentication &amp; authorization</li>
+        <li>Profile management</li>
+        <li>Secure data storage &amp; retrieval</li>
+        <li>Scalable backend architecture</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-pill">Spring Boot</span><span class="stack-pill">MySQL</span>
+      </div>
+    </article>
 
-        <div class="project-card">
-            <h3>RTPS Project</h3>
-            <p>
-                AI-based Company Specific Preparation Portal.
-            </p>
-        </div>
+    <article class="project-card reveal">
+      <div class="project-top">
+        <h3>RTPS — Preparation Portal</h3>
+        <span class="project-tag">AI Company-Specific Prep Portal</span>
+      </div>
+      <p class="project-desc">An intelligent placement-preparation portal that gives students
+        personalized, company-specific guidance and tracks their readiness over time.</p>
+      <ul class="feature-list">
+        <li>AI-based preparation guidance</li>
+        <li>Resume builder with certificate upload</li>
+        <li>Placement tracking system</li>
+        <li>Company-wise preparation resources</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-pill">Full Stack</span><span class="stack-pill">AI Integration</span>
+      </div>
+    </article>
 
-    </div>
-
+  </div>
 </section>
 
-<section id="education">
-
+<!-- EDUCATION -->
+<section id="education" class="section alt">
+  <div class="section-head reveal">
+    <span class="file-label">education.yml</span>
     <h2>Education</h2>
+  </div>
 
-    <table>
-
-        <tr>
-            <th>Qualification</th>
-            <th>Institution</th>
-            <th>Year</th>
-        </tr>
-
-        <tr>
-            <td>B.E CSE</td>
-            <td>Sona College of Technology</td>
-            <td>2024-2028</td>
-        </tr>
-
-        <tr>
-            <td>HSC</td>
-            <td>The Gugai Higher Secondary School</td>
-            <td>2023-2024</td>
-        </tr>
-
-        <tr>
-            <td>SSLC</td>
-            <td>The Gugai Higher Secondary School</td>
-            <td>2021-2022</td>
-        </tr>
-
-    </table>
-
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-year">2024 &ndash; 2028 · Pursuing</span>
+        <h3>B.E. Computer Science &amp; Engineering</h3>
+        <p>Sona College of Technology, Anna University &middot; CGPA: 8.36</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-year">2023 &ndash; 2024</span>
+        <h3>Higher Secondary (HSC)</h3>
+        <p>The Gugai Higher Secondary School &middot; 84.67%</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-year">2021 &ndash; 2022</span>
+        <h3>SSLC</h3>
+        <p>The Gugai Higher Secondary School &middot; 83%</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
+<!-- CERTIFICATIONS + ACHIEVEMENTS -->
+<section id="certifications" class="section">
+  <div class="section-head reveal">
+    <span class="file-label">certs.log</span>
+    <h2>Certifications &amp; Achievements</h2>
+  </div>
 
-    <h2>Contact</h2>
+  <div class="cert-grid">
+    <div class="cert-card reveal">
+      <h3>Infosys Springboard</h3>
+      <ul>
+        <li>Java Programming</li>
+        <li>Python Programming</li>
+        <li>C Programming</li>
+        <li>Artificial Intelligence Primer</li>
+        <li>JDBC</li>
+      </ul>
+    </div>
+    <div class="cert-card reveal">
+      <h3>NPTEL</h3>
+      <ul>
+        <li>Design Thinking &ndash; A Primer</li>
+        <li>Design &amp; Implementation of Human Computer Interfaces</li>
+      </ul>
+    </div>
+    <div class="cert-card reveal">
+      <h3>FutureSkills Prime</h3>
+      <ul>
+        <li>Digital 101 (30 Hours)</li>
+        <li>Digital Applications</li>
+        <li>STEM Program</li>
+      </ul>
+    </div>
+  </div>
 
-    <p>Email: manikandanvmk30@gmail.com</p>
+  <div class="achievements reveal">
+    <h3>// Achievements</h3>
+    <ul class="achv-list">
+      <li>Maintained a CGPA of 8.36 throughout B.E. Computer Science and Engineering.</li>
+      <li>Completed multiple certifications across NPTEL, Infosys Springboard, and FutureSkills Prime.</li>
+      <li>Built full-stack and desktop applications: Event Matrix, Hospital Monitor, Student Identity System, and the RTPS Preparation Portal.</li>
+      <li>Actively developing skills in Artificial Intelligence, Full Stack Development, and modern web technologies.</li>
+    </ul>
+  </div>
+</section>
 
-    <p>LinkedIn:
-        www.linkedin.com/in/manikandanv30
-    </p>
+<!-- CONTACT -->
+<section id="contact" class="section alt contact-section">
+  <div class="section-head reveal">
+    <span class="file-label">contact.sh</span>
+    <h2>Let's Connect</h2>
+  </div>
 
-    <p>GitHub:
-        github.com/manikandanvmk30-cpu
-    </p>
-
+  <div class="contact-terminal reveal">
+    <div class="terminal-bar">
+      <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+      <span class="terminal-title">contact.sh</span>
+    </div>
+    <div class="terminal-body">
+      <p class="line"><span class="prompt">$</span> ./reach_out.sh</p>
+      <a class="contact-line" href="mailto:manikandanvmk30@gmail.com">
+        <span class="contact-key">email</span><span class="contact-arrow">→</span>manikandanvmk30@gmail.com
+      </a>
+      <a class="contact-line" href="tel:+919677759617">
+        <span class="contact-key">phone</span><span class="contact-arrow">→</span>+91 96777 59617
+      </a>
+      <a class="contact-line" href="https://www.linkedin.com/in/manikandanv30" target="_blank" rel="noopener">
+        <span class="contact-key">linkedin</span><span class="contact-arrow">→</span>linkedin.com/in/manikandanv30
+      </a>
+      <a class="contact-line" href="https://github.com/manikandanvmk30-cpu" target="_blank" rel="noopener">
+        <span class="contact-key">github</span><span class="contact-arrow">→</span>github.com/manikandanvmk30-cpu
+      </a>
+      <p class="line muted">// Based in Salem, Tamil Nadu, India</p>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Manikandan V | Portfolio
+  <p>&copy; 2026 Manikandan V &mdash; built line by line.</p>
 </footer>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
